@@ -1,12 +1,14 @@
-name: Dev Pull Request CI
+name: CI
 
 on:
   pull_request:
-    branches: [dev]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     strategy:
       matrix:
