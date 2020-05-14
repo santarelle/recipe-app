@@ -13,14 +13,24 @@ jobs:
         node-version: [12.x]
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install Packages
+
+      - name: Install dependencies
         run: npm install
+
       - name: Build project
         run: npm run build
-      - name: Lint project
+
+      - name: Check linting
         run: npm run lint
+
+      - name: Check commit message
+        uses: wagoid/commitlint-github-action@v1
