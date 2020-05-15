@@ -7,8 +7,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --ext ts,tsx,js,jsx src/ && prettier --check {src,public}/**/*.*",
-    "lint:fix": "prettier --write {src,public}/**/*.*"
+    "lint": "eslint --ext ts,tsx,js,jsx src/ && prettier --check src/**/*.*",
+    "lint:fix": "prettier --write src/**/*.*"
   },
   "eslintConfig": {
     "extends": "react-app"
