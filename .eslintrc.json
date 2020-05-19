@@ -21,23 +21,46 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "eslint-plugin-import-helpers",
+    "prettier"
+  ],
   "settings": {
     "import/resolver": {
       "node": {
+        "paths": ["."],
         "extensions": [".ts", ".tsx", ".js", ".jsx"]
       }
     }
   },
   "rules": {
     "prettier/prettier": "error",
-    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".ts", ".tsx", ".js", ".jsx"] }
+    ],
     "import/extensions": [
-      2,
+      "error",
       "never",
       {
         "ts": "never",
         "tsx": "never"
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "import-helpers/order-imports": [
+      "error",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "module",
+          "/^@material/",
+          "/^src/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
       }
     ]
   }
