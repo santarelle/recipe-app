@@ -1,0 +1,28 @@
+.search-container {
+  margin: 20px 0;
+  position: relative;
+
+  .search-icon {
+    position: absolute;
+    pointer-events: none;
+    top: 30%;
+    left: 17px;
+  }
+
+  form {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .search-input {
+      padding: 0 calc(1em + 20px);
+      color: inherit;
+      width: 100%;
+    }
+
+    button {
+      width: 83.8px;
+    }
+  }
+}
