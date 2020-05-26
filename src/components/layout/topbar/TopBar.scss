@@ -1,0 +1,27 @@
+@import 'src/assets/styles/colors';
+
+.topbar-container {
+  display: flex;
+
+  header {
+    background: $topbar-color;
+
+    .toolbar-container {
+      justify-content: space-between;
+
+      .logo-name {
+        display: flex;
+        flex-direction: row;
+
+        img {
+          margin-right: 0.5rem;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}
