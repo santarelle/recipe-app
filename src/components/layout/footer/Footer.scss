@@ -1,0 +1,33 @@
+@import 'src/assets/styles/mixin';
+@import 'src/assets/styles/colors';
+
+.footer-container {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+  }
+  a {
+    color: inherit;
+  }
+
+  svg {
+    @include animation(heart-beating, 400ms, ease-in, 0s, infinite, alternate);
+    color: $red;
+  }
+}
+
+@keyframes heart-beating {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
