@@ -1,0 +1,58 @@
+.recipe-card-container {
+  .card-media {
+    overflow: hidden;
+    position: relative;
+
+    img {
+      transition: transform 500ms ease-in;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -10px;
+    margin-bottom: 10px;
+
+    .title {
+      width: 200px;
+    }
+
+    .actions-btn {
+      align-self: baseline;
+    }
+
+    h6 {
+      transition: color ease-in-out 250ms;
+    }
+
+    h6:hover {
+      color: #f50075;
+    }
+
+    .favorite-btn {
+      align-items: initial;
+    }
+  }
+
+  .content-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .content-left,
+    .content-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        margin-right: 2px;
+      }
+    }
+  }
+}
