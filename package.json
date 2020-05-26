@@ -7,8 +7,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --ext ts,tsx,js,jsx src/ && prettier --check src/**/*.*",
-    "lint:fix": "eslint --ext ts,tsx --fix src/ && prettier --write src/**/*.*"
+    "lint": "eslint --ext ts,tsx,js,jsx src/",
+    "lint:fix": "eslint --ext ts,tsx,js,jsx --fix src/"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,14 +40,24 @@
     "@types/node": "^12.12.39",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "axios": "^0.19.2",
+    "connected-react-router": "^6.8.0",
+    "history": "^4.10.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
     "typescript": "^3.7.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-router-dom": "^5.1.5",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "eslint": "^6.8.0",
