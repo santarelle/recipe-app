@@ -1,0 +1,15 @@
+.category-menu-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  button {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category-icon {
+    width: 70px;
+    height: 70px;
+  }
+}
