@@ -6,8 +6,8 @@
   },
   "extends": [
     "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    "airbnb"
+    "airbnb",
+    "plugin:prettier/recommended"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -21,12 +21,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "eslint-plugin-import-helpers",
-    "prettier"
-  ],
+  "plugins": ["react", "@typescript-eslint", "eslint-plugin-import-helpers"],
   "settings": {
     "import/resolver": {
       "node": {
@@ -37,19 +32,16 @@
   },
   "rules": {
     "prettier/prettier": "error",
+    "implicit-arrow-linebreak": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-curly-newline": "off",
     "react/jsx-filename-extension": [
       "error",
-      { "extensions": [".ts", ".tsx", ".js", ".jsx"] }
-    ],
-    "import/extensions": [
-      "error",
-      "never",
       {
-        "ts": "never",
-        "tsx": "never"
+        "extensions": [".ts", ".tsx", ".js", ".jsx"]
       }
     ],
-    "import/prefer-default-export": "off",
+    "import/extensions": ["error", "never"],
     "import-helpers/order-imports": [
       "error",
       {
@@ -60,7 +52,16 @@
           "/^src/",
           ["parent", "sibling", "index"]
         ],
-        "alphabetize": { "order": "asc", "ignoreCase": true }
+        "alphabetize": {
+          "order": "asc",
+          "ignoreCase": true
+        }
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "args": "none"
       }
     ]
   }
