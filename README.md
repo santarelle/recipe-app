@@ -1,5 +1,7 @@
+<h3>Demo: https://recipe-app-two.now.sh/</h3>
+
 <h1 align="center">
-  <img alt="Go Barber" src="./screen.jpg" width="400px" style="border-radius:8px;"/>
+  <img alt="Go Barber" src="./screen.jpg" width="500px" style="border-radius:8px;"/>
 </h1>
 
 <h3 align="center">
