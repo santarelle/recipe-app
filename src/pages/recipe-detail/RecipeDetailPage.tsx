@@ -48,14 +48,14 @@ export const RecipeDetailPage: React.FC = () => {
 
           <Paper elevation={3} style={{ marginTop: 20, padding: 20 }}>
             <Grid container spacing={5}>
-              <Grid item xs={6}>
+              <Grid item md={6} xs={12}>
                 <img
                   src={recipe?.imgUrl}
                   alt={recipe?.title}
                   className="recipe-img"
                 />
               </Grid>
-              <Grid item xs={6}>
+              <Grid item md={6} style={{ width: '100%' }}>
                 {recipe?.ingredients && (
                   <RecipeIngredient ingredients={recipe.ingredients} />
                 )}
