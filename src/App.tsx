@@ -15,7 +15,7 @@ export const App: React.FC = () => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <TopBar />
-      <Container className="app-container">
+      <Container maxWidth="md" className="app-container">
         <CategoryMenu />
         <Search placeholder="Search Recipes..." />
         <Content />

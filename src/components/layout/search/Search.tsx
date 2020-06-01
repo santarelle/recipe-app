@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory, useLocation } from 'react-router-dom';
 
@@ -19,7 +19,6 @@ type SearchProps = {
 export const Search: React.FC<SearchProps> = (props: SearchProps) => {
   const { placeholder } = props;
   const [term, setTerm] = useState('');
-  const inputRef = useRef<HTMLInputElement>(null);
   const { term: termState, loading } = useSelector(
     (state: AppState) => state.searchRecipe,
   );
@@ -29,8 +28,6 @@ export const Search: React.FC<SearchProps> = (props: SearchProps) => {
   useEffect(() => {
     if (location.pathname !== '/search') {
       setTerm('');
-      // eslint-disable-next-line no-unused-expressions
-      inputRef.current?.focus();
     }
   }, [location]);
 
@@ -40,8 +37,6 @@ export const Search: React.FC<SearchProps> = (props: SearchProps) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // eslint-disable-next-line no-unused-expressions
-    inputRef.current?.focus();
 
     if (term) {
       history.push(`/search?q=${term}`);
@@ -59,7 +54,6 @@ export const Search: React.FC<SearchProps> = (props: SearchProps) => {
             placeholder={placeholder}
             className="search-input"
             autoFocus
-            inputRef={inputRef}
             value={term}
             onChange={(e) => setTerm(e.target.value)}
           />

@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #333;
+    background-color: $dark;
   }
   a {
     color: inherit;
@@ -17,7 +17,7 @@
 
   svg {
     @include animation(heart-beating, 400ms, ease-in, 0s, infinite, alternate);
-    color: $red;
+    color: red;
   }
 }
 

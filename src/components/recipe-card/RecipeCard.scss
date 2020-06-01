@@ -16,14 +16,10 @@
     align-items: center;
     justify-content: space-between;
     margin-top: -10px;
-    margin-bottom: 10px;
 
-    .title {
-      width: 200px;
-    }
-
-    .actions-btn {
+    .favorite-btn {
       align-self: baseline;
+      margin-right: -12px;
     }
 
     h6 {
@@ -33,26 +29,15 @@
     h6:hover {
       color: #f50075;
     }
-
-    .favorite-btn {
-      align-items: initial;
-    }
   }
 
   .content-info {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin-bottom: 5px;
 
-    .content-left,
-    .content-right {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      svg {
-        margin-right: 2px;
-      }
+    svg {
+      margin-right: 2px;
     }
   }
 }
