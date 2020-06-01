@@ -32,7 +32,7 @@ export const RecipeListPage: React.FC = () => {
   return (
     <div className="recipe-list-container">
       <Paper variant="outlined" className="recipe-list-content">
-        <Typography variant="h4" component="h2" color="primary">
+        <Typography variant="h6" component="h2" color="primary">
           My Favorite Recipes
         </Typography>
         <Divider className="divider" />

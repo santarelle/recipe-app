@@ -56,9 +56,8 @@ export const SearchPage: React.FC = () => {
         <Loading />
       ) : (
         <Paper variant="outlined" className="recipe-list-content">
-          <Typography variant="h4" component="h2" color="primary">
-            Search
-            {term && `for: ${term}`}
+          <Typography variant="h6" component="h2" color="primary">
+            {term && `Search for: ${term}`}
           </Typography>
           <Divider className="divider" />
           <Grid container spacing={2}>

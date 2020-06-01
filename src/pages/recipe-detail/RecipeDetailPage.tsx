@@ -36,7 +36,7 @@ export const RecipeDetailPage: React.FC = () => {
         <Loading />
       ) : (
         <>
-          <Typography variant="h4" component="h2" color="primary">
+          <Typography variant="h6" component="h2" color="primary">
             {recipe?.title}
           </Typography>
 
@@ -46,7 +46,7 @@ export const RecipeDetailPage: React.FC = () => {
             <YoutubePlayer title={recipe.title} embedUrl={recipe.youtubeUrl} />
           )}
 
-          <Paper elevation={3} style={{ marginTop: 20, padding: 20 }}>
+          <Paper elevation={6} style={{ marginTop: 20, padding: 20 }}>
             <Grid container spacing={5}>
               <Grid item md={6} xs={12}>
                 <img

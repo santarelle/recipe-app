@@ -3,7 +3,6 @@ import './RecipeCard.scss';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -39,7 +38,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = (
             <CardMedia
               component="img"
               alt={recipe.title}
-              height="250"
+              height="200"
               image={recipe.imgUrl}
               title={recipe.title}
             />
@@ -48,17 +47,21 @@ export const RecipeCard: React.FC<RecipeCardProps> = (
         <CardContent>
           <div className="content-header">
             <Link to={`recipe/${recipe.titleUnique}`} className="title">
-              <Typography variant="h6" gutterBottom color="primary">
+              <Typography variant="subtitle1" gutterBottom color="primary">
                 {recipe.title}
               </Typography>
             </Link>
 
-            <div className="actions-btn">
+            <div className="favorite-btn">
               <Tooltip title={toolTipTitle} placement="top">
                 <IconButton
                   onMouseEnter={() => setFavoriteIcon(false)}
                   onMouseLeave={() => setFavoriteIcon(true)}
-                  onClick={handleFavorite}
+                  onClick={() => {
+                    handleFavorite();
+                    setFavoriteIcon(true);
+                  }}
+                  disableRipple
                 >
                   <FavoriteBorderIcon
                     fontSize="large"
@@ -81,29 +84,21 @@ export const RecipeCard: React.FC<RecipeCardProps> = (
                   />
                 </IconButton>
               </Tooltip>
-
-              <Link to={`recipe/${recipe.titleUnique}`}>
-                <Button variant="outlined" color="secondary">
-                  Cook
-                </Button>
-              </Link>
             </div>
           </div>
 
           <div className="content-info">
-            <div className="content-left">
-              <ViewListIcon color="secondary" />
-              {recipe.categoryName}
-            </div>
+            <ViewListIcon color="secondary" />
+            <Typography variant="caption">{recipe.categoryName}</Typography>
+          </div>
 
-            <div className="content-right">
-              {recipe.tags && (
-                <>
-                  <LocalOfferIcon color="secondary" />
-                  {recipe.tags}
-                </>
-              )}
-            </div>
+          <div className="content-info">
+            {recipe.tags && (
+              <>
+                <LocalOfferIcon color="secondary" />
+                <Typography variant="caption">{recipe.tags}</Typography>
+              </>
+            )}
           </div>
         </CardContent>
       </Card>

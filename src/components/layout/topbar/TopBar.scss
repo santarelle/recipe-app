@@ -18,9 +18,18 @@
         }
       }
 
+      .avatar {
+        background-color: $secondary;
+      }
+
       a {
         text-decoration: none;
         color: inherit;
+      }
+
+      .category-btn {
+        cursor: pointer;
+        margin-right: 10px;
       }
     }
   }

@@ -1,13 +1,21 @@
+@import 'src/assets/styles/colors';
+
 .recipe-detail-container {
   h2 {
     font-weight: 700;
   }
+
   h3,
   h6 {
     font-family: 'Pacifico', cursive;
   }
+
+  h3 {
+    color: $secondary;
+  }
+
   .recipe-img {
-    border: 5px solid #fe8e53;
+    border: 5px solid $secondary;
     padding: 5px;
     width: 100%;
   }
