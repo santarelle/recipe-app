@@ -22,6 +22,6 @@ export const loadRecipe = (
       return { ...state, loading: false, recipe: action.payload.recipe };
 
     default:
-      return { ...state };
+      return state;
   }
 };
