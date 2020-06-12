@@ -1,5 +1,4 @@
 import './RecipeCard.scss';
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -33,7 +32,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = (
   return (
     <div className="recipe-card-container">
       <Card elevation={3}>
-        <Link to={`recipe/${recipe.titleUnique}`}>
+        <Link to={`/recipe/${recipe.titleUnique}`}>
           <div className="card-media">
             <CardMedia
               component="img"
@@ -46,7 +45,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = (
         </Link>
         <CardContent>
           <div className="content-header">
-            <Link to={`recipe/${recipe.titleUnique}`} className="title">
+            <Link to={`/recipe/${recipe.titleUnique}`} className="title">
               <Typography variant="subtitle1" gutterBottom color="primary">
                 {recipe.title}
               </Typography>
