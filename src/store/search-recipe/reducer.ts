@@ -27,6 +27,6 @@ export const searchRecipe = (
       return { ...state, recipes: action.payload.recipes, loading: false };
 
     default:
-      return { ...state };
+      return state;
   }
 };
