@@ -32,6 +32,6 @@ export const favoriteRecipes = (
       return { ...state, recipes: [...state.recipes, action.payload.recipe] };
 
     default:
-      return { ...state };
+      return state;
   }
 };
